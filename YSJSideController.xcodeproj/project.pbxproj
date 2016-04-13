@@ -12,6 +12,11 @@
 		7ECB8FEF1CBDEBFF00E10042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECB8FED1CBDEBFF00E10042 /* Main.storyboard */; };
 		7ECB8FF11CBDEBFF00E10042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ECB8FF01CBDEBFF00E10042 /* Assets.xcassets */; };
 		7ECB8FF41CBDEBFF00E10042 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECB8FF21CBDEBFF00E10042 /* LaunchScreen.storyboard */; };
+		7ECB90031CBDEC3D00E10042 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECB8FFD1CBDEC3D00E10042 /* UIColor+Extension.swift */; };
+		7ECB90041CBDEC3D00E10042 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECB8FFE1CBDEC3D00E10042 /* UIImage+Extension.swift */; };
+		7ECB90051CBDEC3D00E10042 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECB90001CBDEC3D00E10042 /* LeftViewController.swift */; };
+		7ECB90061CBDEC3D00E10042 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECB90011CBDEC3D00E10042 /* MainViewController.swift */; };
+		7ECB90071CBDEC3D00E10042 /* YSJSideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECB90021CBDEC3D00E10042 /* YSJSideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		7ECB8FF01CBDEBFF00E10042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ECB8FF31CBDEBFF00E10042 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7ECB8FF51CBDEBFF00E10042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ECB8FFD1CBDEC3D00E10042 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		7ECB8FFE1CBDEC3D00E10042 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		7ECB90001CBDEC3D00E10042 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		7ECB90011CBDEC3D00E10042 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		7ECB90021CBDEC3D00E10042 /* YSJSideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSJSideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +64,41 @@
 		7ECB8FE81CBDEBFF00E10042 /* YSJSideController */ = {
 			isa = PBXGroup;
 			children = (
+				7ECB8FFB1CBDEC3D00E10042 /* Library */,
 				7ECB8FE91CBDEBFF00E10042 /* AppDelegate.swift */,
 				7ECB8FEB1CBDEBFF00E10042 /* ViewController.swift */,
 				7ECB8FED1CBDEBFF00E10042 /* Main.storyboard */,
 				7ECB8FF01CBDEBFF00E10042 /* Assets.xcassets */,
 				7ECB8FF21CBDEBFF00E10042 /* LaunchScreen.storyboard */,
 				7ECB8FF51CBDEBFF00E10042 /* Info.plist */,
+			);
+			path = YSJSideController;
+			sourceTree = "<group>";
+		};
+		7ECB8FFB1CBDEC3D00E10042 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				7ECB8FFC1CBDEC3D00E10042 /* Category */,
+				7ECB8FFF1CBDEC3D00E10042 /* YSJSideController */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		7ECB8FFC1CBDEC3D00E10042 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				7ECB8FFD1CBDEC3D00E10042 /* UIColor+Extension.swift */,
+				7ECB8FFE1CBDEC3D00E10042 /* UIImage+Extension.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		7ECB8FFF1CBDEC3D00E10042 /* YSJSideController */ = {
+			isa = PBXGroup;
+			children = (
+				7ECB90001CBDEC3D00E10042 /* LeftViewController.swift */,
+				7ECB90011CBDEC3D00E10042 /* MainViewController.swift */,
+				7ECB90021CBDEC3D00E10042 /* YSJSideViewController.swift */,
 			);
 			path = YSJSideController;
 			sourceTree = "<group>";
@@ -135,8 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ECB90031CBDEC3D00E10042 /* UIColor+Extension.swift in Sources */,
 				7ECB8FEC1CBDEBFF00E10042 /* ViewController.swift in Sources */,
 				7ECB8FEA1CBDEBFF00E10042 /* AppDelegate.swift in Sources */,
+				7ECB90061CBDEC3D00E10042 /* MainViewController.swift in Sources */,
+				7ECB90051CBDEC3D00E10042 /* LeftViewController.swift in Sources */,
+				7ECB90071CBDEC3D00E10042 /* YSJSideViewController.swift in Sources */,
+				7ECB90041CBDEC3D00E10042 /* UIImage+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

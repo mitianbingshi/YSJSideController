@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  YSJSideController
+//  ShopNC_SaaS
 //
-//  Created by 闫树军 on 16/4/13.
+//  Created by 闫树军 on 16/4/12.
 //  Copyright © 2016年 闫树军. All rights reserved.
 //
 
@@ -12,10 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    internal let leftSide = YSJSideViewController()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window!.backgroundColor = UIColor.blueColor()
+        self.window!.makeKeyAndVisible()
+
+        self.window?.rootViewController = leftSide
         return true
     }
 
