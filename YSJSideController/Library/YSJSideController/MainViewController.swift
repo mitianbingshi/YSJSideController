@@ -12,7 +12,7 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.redColor()
+        self.view.backgroundColor = UIColor.whiteColor()
         let leftItem=UIBarButtonItem(title: "菜单", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(MainViewController.menu))
         self.navigationItem.leftBarButtonItem=leftItem
         

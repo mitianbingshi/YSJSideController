@@ -12,7 +12,7 @@ class LeftViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.greenColor()
+        self.view.backgroundColor = UIColor.colorWithRGBA(230, G: 47, B: 44, A: 1)
         // Do any additional setup after loading the view.
     }
 

@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        self.window!.backgroundColor = UIColor.blueColor()
+        self.window!.backgroundColor = UIColor.colorWithRGBA(230, G: 47, B: 44, A: 1)
         self.window!.makeKeyAndVisible()
 
         self.window?.rootViewController = leftSide

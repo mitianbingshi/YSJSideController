@@ -15,7 +15,9 @@ class YSJSideViewController: UIViewController {
     var leftViewController      :UIViewController!// 用来接收左视图
     var mainViewController      :UIViewController!//用来接收主视图
     var _scalef                 :CGFloat!
-    
+    var _leftLength             :CGFloat!
+    var tap                     :UITapGestureRecognizer!
+    var pan                     :UIPanGestureRecognizer!
    
     
     
@@ -28,9 +30,14 @@ class YSJSideViewController: UIViewController {
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nil, bundle: nil)
         let navigation = UINavigationController.init(rootViewController: MainViewController())
-        navigation.navigationBar.barTintColor = UIColor.blueColor()
+        navigation.navigationBar.barTintColor = UIColor.colorWithRGBA(230, G: 47, B: 44, A: 1)
         navigation.navigationBar.translucent = false
         
+        if iPhone4s {
+            _leftLength = 200
+        }else{
+            _leftLength = 280
+        }
         create(LeftViewController(), mainVC: navigation)
     }
 
@@ -60,8 +67,11 @@ class YSJSideViewController: UIViewController {
         }
         
         // 点击主界面 关闭菜单
-        self.mainViewController.view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(YSJSideViewController.handleTapGesture(_:))))
-        self.mainViewController.view.addGestureRecognizer(UIPanGestureRecognizer(target:self ,action:#selector(YSJSideViewController.handlePanGesture(_:))))
+        tap = UITapGestureRecognizer(target: self, action: #selector(YSJSideViewController.handleTapGesture(_:)))
+        pan = UIPanGestureRecognizer(target:self ,action:#selector(YSJSideViewController.handlePanGesture(_:)))
+        // 点击主界面 关闭菜单
+        self.mainViewController.view.addGestureRecognizer(tap)
+        self.mainViewController.view.addGestureRecognizer(pan)
 
         self.view.addSubview(self.leftViewController.view)
         self.view.addSubview(self.mainViewController.view)
@@ -75,6 +85,10 @@ class YSJSideViewController: UIViewController {
         self.mainViewController.view.center = CGPointMake((UIScreen.mainScreen().bounds.size.width+400)/2,20 + UIScreen.mainScreen().bounds.size.height/2)
         UIView.commitAnimations()
         
+        self.mainViewController.view.addGestureRecognizer(pan)
+        self.mainViewController.view.addGestureRecognizer(tap)
+
+        
     }
     
     // MARK: - 关闭左侧菜单
@@ -83,6 +97,9 @@ class YSJSideViewController: UIViewController {
         self.mainViewController.view.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.0, 1.0)
         self.mainViewController.view.center = CGPointMake(UIScreen.mainScreen().bounds.size.width/2,20 + UIScreen.mainScreen().bounds.size.height/2)
         UIView.commitAnimations()
+        
+        self.mainViewController.view.removeGestureRecognizer(pan)
+        self.mainViewController.view.removeGestureRecognizer(tap)
     }
     
     // MARK: - 点击主界面 关闭菜单
