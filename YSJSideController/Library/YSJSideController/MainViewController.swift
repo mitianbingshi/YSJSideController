@@ -14,7 +14,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
         // 跳转通知
-        // 跳转通知
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MainViewController.pushToController(_:)), name: "POSTTOCONTROLLER", object: nil)
         
         let leftItem=UIBarButtonItem(title: "菜单", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(MainViewController.menu))
@@ -44,6 +43,12 @@ class MainViewController: UIViewController {
     func pushToController(notification:NSNotification) {
         self.navigationController?.pushViewController(TempViewController(), animated: true)
     }
+    
+    // MARK: - 销毁通知
+    deinit{
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
+
    
     
     // MARK: - 内存警告
