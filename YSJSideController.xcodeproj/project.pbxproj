@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E14EC491CBF1E8200AE1B8F /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14EC481CBF1E8200AE1B8F /* Header.swift */; };
+		7E14EC4B1CBF271400AE1B8F /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14EC4A1CBF271400AE1B8F /* TempViewController.swift */; };
 		7ECB8FEA1CBDEBFF00E10042 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECB8FE91CBDEBFF00E10042 /* AppDelegate.swift */; };
 		7ECB8FEC1CBDEBFF00E10042 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECB8FEB1CBDEBFF00E10042 /* ViewController.swift */; };
 		7ECB8FEF1CBDEBFF00E10042 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECB8FED1CBDEBFF00E10042 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		7E14EC481CBF1E8200AE1B8F /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		7E14EC4A1CBF271400AE1B8F /* TempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
 		7ECB8FE61CBDEBFF00E10042 /* YSJSideController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YSJSideController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ECB8FE91CBDEBFF00E10042 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ECB8FEB1CBDEBFF00E10042 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				7ECB8FF01CBDEBFF00E10042 /* Assets.xcassets */,
 				7ECB8FF21CBDEBFF00E10042 /* LaunchScreen.storyboard */,
 				7ECB8FF51CBDEBFF00E10042 /* Info.plist */,
+				7E14EC4A1CBF271400AE1B8F /* TempViewController.swift */,
 			);
 			path = YSJSideController;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 				7ECB8FEC1CBDEBFF00E10042 /* ViewController.swift in Sources */,
 				7ECB8FEA1CBDEBFF00E10042 /* AppDelegate.swift in Sources */,
 				7ECB90061CBDEC3D00E10042 /* MainViewController.swift in Sources */,
+				7E14EC4B1CBF271400AE1B8F /* TempViewController.swift in Sources */,
 				7ECB90051CBDEC3D00E10042 /* LeftViewController.swift in Sources */,
 				7ECB90071CBDEC3D00E10042 /* YSJSideViewController.swift in Sources */,
 				7ECB90041CBDEC3D00E10042 /* UIImage+Extension.swift in Sources */,

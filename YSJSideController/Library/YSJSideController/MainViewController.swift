@@ -13,6 +13,10 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
+        // 跳转通知
+        // 跳转通知
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MainViewController.pushToController(_:)), name: "POSTTOCONTROLLER", object: nil)
+        
         let leftItem=UIBarButtonItem(title: "菜单", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(MainViewController.menu))
         self.navigationItem.leftBarButtonItem=leftItem
         
@@ -24,33 +28,27 @@ class MainViewController: UIViewController {
     }
     
     
-    // MARK: -菜单
+    // MARK: - 菜单
     func menu() {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.leftSide .showLeftMenu()
     }
     
-    // MARK: -分享
+    // MARK: - 分享
     func share() {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.leftSide .closeLeftMenu()
     }
     
-    // MARK: -内存警告
+    // MARK: - 通知跳转
+    func pushToController(notification:NSNotification) {
+        self.navigationController?.pushViewController(TempViewController(), animated: true)
+    }
+   
+    
+    // MARK: - 内存警告
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
+ }
