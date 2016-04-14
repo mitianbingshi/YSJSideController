@@ -20,4 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
+swift侧边菜单初始化版本0.2
+1.优化了 菜单滑动 ：菜单打开的时候滑动才生效，关闭时主页的滑动不生效
+2.适配了 statusbar 和导航的颜色   
+3.增加了 iphone4 和iphone4later 侧边尺寸的判断 
+
 
