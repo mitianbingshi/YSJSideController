@@ -142,13 +142,7 @@ class YSJSideViewController: UIViewController {
                 closeLeftMenu()
             }
         }
-        
-        
-        
-        
-
-        
-        
+ 
     }
     
     override func didReceiveMemoryWarning() {

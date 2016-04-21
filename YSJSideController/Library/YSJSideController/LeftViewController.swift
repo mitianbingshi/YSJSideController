@@ -13,9 +13,6 @@ class LeftViewController: UIViewController {
     var mainTableView          :UITableView!
     var mainDataSource         :NSArray!
 
-
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.colorWithRGBA(230, G: 47, B: 44, A: 1)
@@ -27,10 +24,6 @@ class LeftViewController: UIViewController {
         mainTableView.backgroundColor = UIColor.colorWithRGBA(230, G: 47, B: 44, A: 1)
         mainTableView.tableFooterView = UIView.init()
         self.view.addSubview(mainTableView)
-
-        
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,30 +72,7 @@ extension LeftViewController : UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row == 0 {
-            
-        }else if indexPath.row == 1{
-            
-        }else if indexPath.row == 2{
-            
-        }else if indexPath.row == 3{
-            
-        }else if indexPath.row == 4{
-            
-            
-        }else if indexPath.row == 5{
-            
-        }else if indexPath.row == 6{
-            
-        }else if indexPath.row == 7{
-            
-        }else if indexPath.row == 8{
-            
-        }else if indexPath.row == 9{
-            
-        }
-        
-        
+
         NSNotificationCenter.defaultCenter().postNotificationName("POSTTOCONTROLLER", object: indexPath.row)
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         appDelegate.leftSide.closeLeftMenu()
